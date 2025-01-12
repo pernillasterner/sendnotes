@@ -1,0 +1,39 @@
+# fly.toml app configuration file generated for sendnotes-shy-glitter-115 on 2025-01-12T14:17:25+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'sendnotes-shy-glitter-115'
+primary_region = 'arn'
+console_command = 'php /var/www/html/artisan tinker'
+
+[build]
+  [build.args]
+    NODE_VERSION = '18'
+    PHP_VERSION = '8.2'
+
+[env]
+  APP_ENV = 'production'
+  DB_CONNECTION = "pgsql"
+  APP_URL = 'https://sendnotes-shy-glitter-115.fly.dev/'
+  LOG_CHANNEL = 'stderr'
+  LOG_LEVEL = 'info'
+  LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
+  SESSION_DRIVER = 'cookie'
+  SESSION_SECURE_COOKIE = 'true'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[deploy]
+release_command = "php /var/www/html/artisan migrate --force"
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
