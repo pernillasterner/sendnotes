@@ -8,7 +8,7 @@
 </p>
 
 ## View if live
-- [Send scheduled notes app - View it live](sendnotes-shy-glitter-115.fly.dev)
+- [Send scheduled notes app - View it live](https://sendnotes-shy-glitter-115.fly.dev/)
 
 
 ## About Laravel
