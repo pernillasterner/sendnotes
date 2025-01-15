@@ -7,9 +7,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## View if live
-- [Send scheduled notes app - View it live](https://sendnotes-shy-glitter-115.fly.dev/)
-
 
 ## About Laravel
 
